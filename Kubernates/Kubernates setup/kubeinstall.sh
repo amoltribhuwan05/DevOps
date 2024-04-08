@@ -18,3 +18,4 @@ sysctl --system
 setenforce 0" >> /etc/sysctl.d/k8s.conf
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 sudo systemctl enable kubelet && systemctl start kubelet
+sudo sysctl net.bridge.bridge-nf-call-iptables=1
