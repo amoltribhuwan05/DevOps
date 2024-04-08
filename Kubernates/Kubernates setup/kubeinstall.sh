@@ -2,20 +2,12 @@ sudo yum install docker -y
 sudo systemctl enable docker && systemctl start docker
 sudo touch /etc/yum.repos.d/kubernetes.repo
 echo "[kubernetes]
-
 name=Kubernetes
-
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
-
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/
 enabled=1
-
 gpgcheck=1
-
-repo_gpgcheck=0
-
-gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-
-exclude=kube* " >>  /etc/yum.repos.d/kubernetes.repo
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni " >>  /etc/yum.repos.d/kubernetes.repo
 
 sudo touch /etc/sysctl.d/k8s.conf
 echo " net.bridge.bridge-nf-call-ip6tables = 1
