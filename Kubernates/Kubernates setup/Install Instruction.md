@@ -6,3 +6,4 @@
 <li>give the execution permission to the files sudo chmod +x kubeinstall.sh kubemaster.sh</li>
 <li>run the kubeinstall.sh file and wait for installation</li>
 <li>after fininshing the  installation run the next kubester.sh file</li>
+<li></li>
