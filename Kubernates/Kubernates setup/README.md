@@ -15,4 +15,3 @@
 <li>give the execution permission to the files sudo chmod +x kubeinstall.sh</li>
 <li>run the kubeinstall.sh file and wait for installation</li>
 <li>paste the generated token in the master node</li>
-``shelldoc``
