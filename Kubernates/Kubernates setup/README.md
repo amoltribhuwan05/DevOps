@@ -1,9 +1,9 @@
 <h1>Kubernates Master Node Installation.</h1>
 <li>copy the kubeinstall.sh file content</li>
 <li>login as superuser using 
-'''sh
-  sudo su
-'''
+```sh
+sudo su
+```
 </li>
 <li>create new shell script file nano kubeinstall.sh</li>
 <li>create another new shell script file nano kubemaster.sh</li>
