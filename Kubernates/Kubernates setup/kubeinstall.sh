@@ -3,10 +3,10 @@ sudo systemctl enable docker && systemctl start docker
 sudo touch /etc/yum.repos.d/kubernetes.repo
 echo "[kubernetes]
 name=Kubernetes
-baseurl=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.31/rpm/
 enabled=1
 gpgcheck=1
-gpgkey=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/repodata/repomd.xml.key
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.31/rpm/repodata/repomd.xml.key
 exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni " >>  /etc/yum.repos.d/kubernetes.repo
 
 sudo touch /etc/sysctl.d/k8s.conf
