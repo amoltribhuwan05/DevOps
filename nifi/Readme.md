@@ -5,7 +5,7 @@
 <p><li>📁 Directory Structure</p></li>
 
 ```bash
-mnt
+nifi
 ├── nifi-data
 ├── nifi-registry-data
 └── nifi-shares
@@ -30,9 +30,9 @@ python3 -m venv venv
 <p> You Can Create above structure using following comands one by one.</p>
 
 ```bash
-cd / #change the current working directory to /
-sudo mkdir /mnt # create mnt directory if not exists
-cd /mnt ##change the current working directory to /
+cd $HOME #change the current working directory to HOME
+sudo mkdir nifi # create nifi directory if not exists
+cd nifi ##change the current working directory to /
 sudo mkdir nifi-data nifi-registry-data nifi-shares #create the nifi-data,nifi-registry-data,nifi-shares directories.
 sudo mkdir -p nifi-shares/nifi-dumps nifi-shares/repos  #create the nifi-dumps,repos directories.
 sudo python3 -m venv venv #create python venv vertual enviornment
