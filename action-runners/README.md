@@ -15,7 +15,7 @@
 Clone the GitHub Repo.
 
 ```sh
-git clone amoltribhuwan05/DevOps.git
+git clone https://github.com/amoltribhuwan05/DevOps.git
 ```
 </p></li>
 
