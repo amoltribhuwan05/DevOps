@@ -103,3 +103,6 @@ sudo yum install curl git -y
 ```
 
 **_NOTE:_** To Register Multiple Runners replicate the service accoding to your service name and changet the cotainer name also mention an different volumes for different services
+
+---
+Made with ❤️ by [Amol](https://github.com/amoltribhuwan05).
