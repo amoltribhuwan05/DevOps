@@ -1,0 +1,13 @@
+services:
+  Runner:
+    image: actions-runner:latest
+    container_name: github_runner
+    restart: always
+    environment:
+      - REPO=<USERNAME>/<REPO>
+      - TOKEN=<Github Personal Access TOKEN>
+    volumes:
+    -  data:/home/docker/
+
+volumes:
+  data:
