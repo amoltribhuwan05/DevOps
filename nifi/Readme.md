@@ -110,7 +110,7 @@ services:
       - 8081:8080                                               #Host_Port:Container_path ,nifi will be access over the port number 8081
     environment:
       SINGLE_USER_CREDENTIALS_USERNAME: admin                   #NIFI_username
-      SINGLE_USER_CREDENTIALS_PASSWORD: Polarisnifi@47          #NIFI_Password
+      SINGLE_USER_CREDENTIALS_PASSWORD: nifi@123456789          #NIFI_Password
       NIFI_WEB_HTTP_PORT: 8080                                  #NIFI_HTTP_PORT
       NIFI_WEB_PROXY_HOST: <server_ip>:8081
 
