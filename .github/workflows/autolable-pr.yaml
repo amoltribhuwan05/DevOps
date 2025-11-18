@@ -1,0 +1,45 @@
+name: "Label PRs targeting prod"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+  issues: write       # labels are managed via Issues API (PRs are issues)
+  pull-requests: write
+
+jobs:
+  label-pr:
+    if: github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure and add 'production' label to PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const label = 'production';
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+
+            // create label if it doesn't exist
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: label });
+            } catch (err) {
+              await github.rest.issues.createLabel({
+                owner,
+                repo,
+                name: label,
+                color: '7DDA58', // green, change if you want
+                description: 'PR targets the main branch'
+              });
+            }
+
+            // add the label to the PR (PRs are issues)
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number,
+              labels: [label]
+            });
